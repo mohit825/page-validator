@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div class="form-group">
+  <label for = "ref">Refrence::</label>
+  <input (ngModel)="ref" name="ref" #ref="ngModel" id="ref" type="text" class="form-control"
+  pattern="[0-9]?[0-9]?[-]?[0-9], ?">
+  <div *ngIf="ref.invalid && ref.touched" class="alert-danger comman-error-mesage">
+  <div  *ngIf="ref.errors.pattern">
+      
+          PLEASE ENTER VALID REFRENCE NUMBER.
+      
+    </div>
+  </div>
+</div>
+
+
